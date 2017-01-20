@@ -5,5 +5,4 @@ var inner_main = document.querySelector('#nav .main');
 var toggle = document.querySelector('#nav .toggle');
 toggle.onclick = function () {
     inner_main.classList.toggle("disabled");
-    //inner.style.height = inner.offsetHeight;
 };

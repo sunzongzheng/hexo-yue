@@ -9,7 +9,7 @@
             <a href="<%=config.root + post.path%>" class="title"><%=post.title%></a>
             <% if (post.date) { %>
             <time datetime="<%=post.date.toJSON()%>">
-                <i class="glyphicon glyphicon-calendar"></i><%=date(post.date)%>
+                <span class="calendar">&#xe609;</span>发表于<%=date(post.date)%>
             </time>
             <% } %>
             <div class="post-content">

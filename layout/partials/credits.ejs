@@ -1,0 +1,30 @@
+<div class="credits" id="credits">
+    <div class="inner clearfix">
+        <div class="left">
+            <p class="case_number">Copyright © 2017 <%=config.author%> <%=theme.case_number%></p>
+            <p class="copyright">Theme&nbsp;
+                <a href="https://github.com/sunzongzheng/hexo-yue">hexo-yue&nbsp;</a>
+                By&nbsp;
+                <a href="https://github.com/sunzongzheng/">Suen</a>
+            </p>
+            <div class="cdn clearfix">
+                <a href="https://www.upyun.com/"><img src="/images/upyun_logo_90x45.png"></a>
+                <a>提供cdn加速服务</a>
+            </div>
+        </div>
+        <ul class="info">
+            <% if(theme.contact.weibo){ %>
+            <li class="weibo"><a href="<%=theme.contact.weibo%>" target="_blank">微博</a></li>
+            <% } %>
+            <% if(theme.contact.QQ){ %>
+            <li class="QQ">QQ<span>：673541497</span></li>
+            <% } %>
+            <% if(theme.contact.github){ %>
+            <li class="github"><a href="<%=theme.contact.github%>" target="_blank">Github</a></li>
+            <% } %>
+            <% if(theme.contact.mail){ %>
+            <li class="mail"><%=theme.contact.mail%></li>
+            <% } %>
+        </ul>
+    </div>
+</div>

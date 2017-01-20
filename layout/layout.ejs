@@ -1,0 +1,46 @@
+<%
+var pageTitle = '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+if (pageTitle !='') pageTitle = pageTitle + ' | ' + config.title;
+else pageTitle = config.title;
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title><%=pageTitle%></title>
+    <link href="//cdn.bootcss.com/highlight.js/9.9.0/styles/default.min.css" rel="stylesheet">
+    <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <% theme.stylesheets.forEach(function(url) { %>
+    <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+    <% } %>
+</head>
+<body>
+
+<%-partial('partials/nav.ejs')%>
+<%-partial('partials/header.ejs')%>
+
+<section id="main">
+    <%- body %>
+</section>
+
+<%-partial('partials/footer.ejs')%>
+
+<%-partial('partials/credits.ejs')%>
+
+<script src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+<!-- scripts list from theme config.yml -->
+<% theme.scripts.forEach(function(url) { %>
+<script src="<%=url%>"></script>
+<% }); %>
+<% } %>
+</body>
+</html>

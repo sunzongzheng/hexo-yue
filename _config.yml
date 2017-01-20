@@ -1,0 +1,44 @@
+
+# html lang
+language: en
+
+#菜单
+menu:
+  首页: /
+  关于: /about
+  联系: /contact
+  归档: /archives
+
+#联系方式
+contact:
+  weibo: http://weibo.com/u/3291065293
+  github: https://github.com/sunzongzheng
+  mail: admin@zzsun.cc
+  QQ: 673541497
+#友情链接
+links:
+  大师: http://hkcyl.cn/
+  啄米: http://trumi.cn/
+  邱俊: https://qiujun.me/
+
+#备案号
+case_number: '湘ICP备15014708号-2'
+# Miscelaneous
+favicon: /favicon.ico
+#less
+less:
+  compress: true
+#autoprefix
+autoprefixer:
+  exclude:
+    - hexo-yue.css
+  browsers:
+    - 'last 2 versions'
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/hexo-yue.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/hexo-yue.js

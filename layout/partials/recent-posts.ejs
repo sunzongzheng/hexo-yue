@@ -1,0 +1,23 @@
+<div class="post-list inner">
+    <% if (page.posts.length > 0) { %>
+    <% page.posts.sort('date', -1).limit(10).each(function(post) { %>
+    <div class="recent-post-item clearfix">
+        <div class="bubbles">
+            <a href="<%=config.root + post.path%>"><%-post.content.includes('audio')?"&#xe8f0;":"&#xe6de;"%></a>
+        </div>
+        <div class="post">
+            <a href="<%=config.root + post.path%>" class="title"><%=post.title%></a>
+            <% if (post.date) { %>
+            <time datetime="<%=post.date.toJSON()%>">
+                <i class="glyphicon glyphicon-calendar"></i><%=date(post.date)%>
+            </time>
+            <% } %>
+            <div class="post-content">
+                <%- post.excerpt || post.content %>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+    <% } %>
+    <%-partial('partials/pagination')%>
+</div>

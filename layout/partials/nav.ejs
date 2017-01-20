@@ -1,12 +1,15 @@
 <nav id="nav">
     <div class="inner clearfix">
-        <ul class="menu clearfix">
-            <% Object.keys(theme.menu).forEach(function(key) { %>
-            <li><a href="<%=theme.menu[key]%>"><%=key%></a></li>
-            <% }); %>
-        </ul>
-        <div class="search">
-            <input type="text" placeholder="输入并回车"/>
+        <div class="main disabled">
+            <ul class="menu clearfix">
+                <% Object.keys(theme.menu).forEach(function(key) { %>
+                <li><a href="<%=theme.menu[key]%>"><%=key%></a></li>
+                <% }); %>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="输入并回车"/>
+            </div>
         </div>
+        <a class="toggle">&#xe604;</a>
     </div>
 </nav>

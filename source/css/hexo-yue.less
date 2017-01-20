@@ -50,6 +50,7 @@ body {
 .post-content {
   line-height: 170%;
   color: #555;
+  overflow-y: auto;
   ol, ul {
     font-size: 14px;
     margin: 10px 0;
@@ -218,6 +219,9 @@ header {
         left: -20px;
       }
     }
+    #pagination {
+      padding-left: 100px;
+    }
   }
   .post-list:after {
     content: "";
@@ -241,6 +245,27 @@ header {
     background: #DDD;
     border-radius: 999px;
     z-index: 10;
+  }
+}
+
+#post {
+  margin-top: 50px;
+  .post-content {
+    position: relative;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5.5%;
+    .title {
+      display: block;
+      font-size: 2.25em;
+      line-height: 120%;
+      font-weight: normal;
+      color: black;
+      transition: all 0.2s ease-in-out;
+    }
+    .title:hover {
+      color: @theme-color;
+    }
   }
 }
 
@@ -371,7 +396,7 @@ header {
 }
 
 #pagination {
-  padding: 35px 0 13px 100px;
+  padding: 35px 0 13px;
   text-align: center;
   a,
   a:hover,
@@ -381,6 +406,24 @@ header {
   a.disabled {
     color: #868686;
     cursor: not-allowed;
+  }
+}
+
+#archive,
+#category,
+#tag {
+  a,
+  a:hover,
+  a:visited {
+    color: #777;
+  }
+  li,
+  .category-item,
+  .tag-item {
+    margin-top: 20px;
+    h2 {
+      margin-bottom: 10px;
+    }
   }
 }
 

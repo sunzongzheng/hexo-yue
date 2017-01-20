@@ -1,8 +1,10 @@
 <nav id="pagination" class="inner">
-    <% if (page.prev) { %>
+    <% if (page.prev_link) { %>
     <a href="<%=url_for(page.prev_link)%>" class="prev">&larr; Prev</a>
+    <% } else if (page.prev && page.prev.path) { %>
+    <a href="<%=url_for(page.prev.path)%>" class="prev">&larr; Prev</a>
     <% } else { %>
-    <a class="prev disabled">&larr; Prev<%=page.prev_link%></a>
+    <a class="prev disabled">&larr; Prev</a>
     <% } %>
 
     <% if (page.next_link) { %>
